@@ -1,0 +1,217 @@
+@font-face {
+    font-family: 'Fashion1';
+    src: url('../font/Fashion.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Fashion2';
+    src: url('../font/Fashion Stamp.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Fashion3';
+    src: url('../font/FASHIONV.TTF') format('truetype');
+}
+*{
+    padding: 0;
+    margin: 0;
+    --black: #000001;
+    --red: #E3371E;
+    --rosa: #FF7A48;
+    --rosa-vermelho: #103778;
+    --branco: #F8F4F5;
+    --verde: #0593A2;
+    --escuro: #151F30;
+    --rose: #E6325C;
+}
+header{
+    font-family: Fashion1;
+}
+
+#cadastrar{
+    display: block;
+}
+#salvar{
+    display: none;
+    background-color: green;
+}
+.section_listar{
+    display: none;
+    transform: scale(0);
+    transition: 0.5s;
+    border: none;
+    box-shadow: 1px 1px 10px;
+}
+.div_botoes_tabela{
+    display: flex;
+    gap: 8px;
+    justify-content: space-evenly;
+    margin-bottom: 12px;
+}
+.tabela{
+    max-height: 300px;
+    overflow: scroll;
+    background-color: rgb(156, 156, 156);
+}
+.tr:hover{
+    background-color: var(--branco);
+}
+.td_header_id{
+    padding: 2px;
+    height: 35px;
+    width: 30px;
+    font-size: 24px;
+    font-weight: bold;
+    border: 1px solid ;
+    text-align: center;
+    color: var(--escuro);
+    background-color: var(--branco);
+}
+.td_header_nome{
+    padding: 2px;
+    height: 30px;
+    width: 30px;
+    font-size: 24px;
+    font-weight: bold;
+    border: 1px solid;
+    text-align: center;
+    color: var(--escuro);
+    background-color: var(--branco);
+}
+.td_id{
+    padding: 2px;
+    height: 30px;
+    width: 30px;
+    font-size: 24px;
+    border: 1px solid var(--rose);
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+.td_none, .td_valor{
+    padding: 2px;
+    padding-left: 8px;
+    height: 40px;
+    width: 500px;
+    border: 1px solid var(--rose);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    cursor: pointer;
+}
+.bt_alterar{
+    display: none;
+}
+.bt_excluir{
+    display: none;
+}
+.p_editar{
+    color: green;
+}
+#menssagem_1{
+    color: orange;
+    background-color: var(--branco);
+    padding: 100px;
+    box-shadow: 1px 1px 10px var(--escuro);
+    width: 330px;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    transform: scale(0);
+    transition: 0.5s;
+}
+#menssagem_1 img{
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    width: 50px;
+    cursor: pointer;
+}
+.divi_tabela_input{
+    height: 200px;
+    overflow: scroll;
+    position: absolute;
+    right: -30px;
+    border: 3px solid var(--escuro);
+    box-shadow: 1px 1px 100px 10px;
+
+    display: none;
+    transform: scale(0);
+    transition: 0.3s;
+
+}
+.table_input{
+    background-color: var(--branco);
+    padding: 7px;
+    width: 260px;
+}
+.td_header_nome_inut{
+    padding: 2px;
+    height: 30px;
+    font-size: 18px;
+    border: 1px solid ;
+    text-align: center;
+    color: var(--escuro);
+    background-color: var(--branco);
+    font-weight: bold;
+}
+.td_header_id_input{
+    padding: 2px;
+    height: 30px;
+    width: 30px;
+    font-size: 18px;
+    border: 1px solid;
+    font-weight: bold;
+    text-align: center;
+    color: var(--escuro);
+    background-color: var(--branco);
+}
+.td_id_input{
+    padding: 4px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid var(--escuro);
+    color: var(--branco);
+    color: var(--rosa-vermelho);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.td_none_input{
+    padding-left: 8px;
+    cursor: pointer;
+    border: 1px solid var(--escuro);
+    color: var(--branco);
+    color: var(--rosa-vermelho);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.tr_input:hover{
+    background-color: #ccc;
+}
+.tr_input:hover .td_none_input{
+    color: var(--rose);
+}
+.tr_input:hover .td_id_input{
+    color: var(--rose);
+}
+.x_btn{
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    width: 50px;
+    cursor: pointer;
+}
+.botão_not_header{
+    border-radius: 0px;
+    background-color: var(--branco);
+    color: var(--escuro);
+    border: 1px ridge var(--escuro);
+    width: 150px;
+    padding: 0;
+    cursor: pointer;
+}
+.botão_not_header:hover{
+    width: 200px;
+    color: var(--branco);
+    background-color: #a00030;
+}
+.invisivel{
+    display: none;
+}

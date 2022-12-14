@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intens Produto</title>
+    <link rel="shortcut icon" href="imgs/icone_terno.png" type="image/x-icon">
+    <link rel="stylesheet" href="Css/estilo_itens_produto.css">
+</head>
+<body>
+    <header>
+        <div class="div_header_h1_img">
+            <img id="logo" src="imgs/logo.png" alt="logo">
+            <h1>Cadastrar Itens Produto</h1>
+        </div>
+        <nav>
+            <button class="botão_header"><a href="Index.html">Home</a></button>
+            <button class="botão_header">Cadastrar
+                <div id='links'>
+                    <a href="cliente.html">Cliente</a>
+                    <a href="produto.html">Produto</a>
+                    <a href="funcionario.html">Funcionário</a>
+                    <a href="cor.html">Cor do produto</a>
+                    <a href="grupo.html">Grupo do produto</a>
+                    <a href="fornecedor.html">Fornecedor</a>
+                    <a href="tipo_entrega.html">Entrega</a>
+                    <a href="intens_produto.html">Itens Produto</a>
+                    <a href="venda.html">Venda</a>
+                </div>
+            </button>
+        </nav>
+    </header>
+    <main>
+        <form>
+            <section class="section_inputs_listar">
+                <section class="section_inputs">
+                    <div class="div_inputs_labekl">
+                        <label>ID Produto:</label>
+                        <input name="id_itens" onclick="crrr('id')" id="id" type="number">
+                    </div>
+                    <div class="div_inputs_labekl">
+                        <label>ID Venda:</label>
+                        <input name="id_venda" onclick="crrr('id_venda')" id="id_venda" type="number">
+                    </div>
+                    <div class="div_inputs_labekl">
+                        <label>Quantidade:</label>
+                        <input name="quantidade" onclick="crrr('quantidade')" id="quantidade" type="number">
+                    </div>
+                    <img id='img_home_notbook' src="imgs/personagem_homem.png" alt="">
+                </section>
+            </section>
+            <section class="botoes">
+                <button class="botão_not_header" id="alterar">Salvar</button>
+                <button  class="botão_not_header" form="" onclick="listar()" id="salvar">Listar</button>
+            </section>
+        </form>
+    </main>
+    <footer>
+        <div>
+            <div class="div_1">
+                <img id="logo_footer" src="imgs/logo.png" alt="">
+                <p>&copy;Todos os direitos Reservados Fashion Style</p>
+            </div>
+            <div class="div_2">
+                <img class="icones_footer" src="imgs/facebook.png" alt="">
+                <p>@Fashion Style estilo</p>
+            </div>
+            <div class="div_2">
+                <img class="icones_footer" src="imgs/instagram.png" alt="">
+                <p>@Fashion Style estilo_gart2080</p>
+            </div>
+            <div class="div_2">
+                <img class="icones_footer" src="imgs/endereco.png" alt="">
+                <p>Endereço: Maldivas/ Buenos Aires/ Vinkacom</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        const id = document.getElementById('id')
+        const id_venda = document.getElementById('id_venda')
+        const quantidade = document.getElementById('quantidade')
+
+        const section = document.getElementsByClassName('section_inputs_listar')[0]
+
+        let cont = true
+
+    
+        function listar() {
+            if (cont == true){
+                const section_listar = document.createElement('section')
+                const botao_alterar = document.createElement('button')
+                const botao_excluir = document.createElement('button')
+                botao_alterar.innerText = 'Alterar'
+                botao_excluir.innerText = 'Excluir'
+                botao_alterar.className= "botão_not_header"
+                botao_excluir.className= "botão_not_header"
+
+                section_listar.className = 'section_listar'
+                section.insertAdjacentElement('beforeend', section_listar)
+                section_listar.insertAdjacentElement('beforeend', botao_alterar)
+                section_listar.insertAdjacentElement('beforeend', botao_excluir)
+            }
+            cont = false
+        }
+
+        function restet_css () {
+            id.style.border = 'var(--rosa-vermelho) solid 1px'
+            id_venda.style.border = 'var(--rosa-vermelho) solid 1px'
+            quantidade.style.border = 'var(--rosa-vermelho) solid 1px'
+
+            id.style.boxShadow = 'none'
+            id_venda.style.boxShadow = 'none'
+            quantidade.style.boxShadow = 'none'
+        }
+        function crrr (valor) {
+            restet_css()
+            document.getElementById(valor).style.borderLeft = '15px groove var(--rosa-vermelho)'
+            document.getElementById(valor).style.boxShadow = '0px 2px 1px var(--rosa-vermelho)'
+            document.getElementById(valor).style.transition = '0.2s'
+        }
+    </script>
+</body>
+</html>

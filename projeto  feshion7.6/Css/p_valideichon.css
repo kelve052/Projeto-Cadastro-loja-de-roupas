@@ -1,0 +1,20 @@
+*{
+    --black: #000001;
+    --red: #E3371E;
+    --rosa: #FF7A48;
+    --rosa-vermelho: #103778;
+    --branco: #F8F4F5;
+    --verde: #0593A2;
+    --escuro: #151F30;
+}
+#p_valideichon{
+    font-weight: 500;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px;
+    text-align: center;
+    padding: 8px;
+    color: var(--red);
+}
+#p_valideichon span{
+    font-weight: 700;
+}

@@ -1,0 +1,95 @@
+*{
+    padding: 0;
+    margin: 0;
+    --black: #000001;
+    --red: #E3371E;
+    --rosa: #FF7A48;
+    --rosa-vermelho: #103778;
+    --branco: #F8F4F5;
+    --verde: #0593A2;
+    --escuro: #151F30;
+    --rose: #E6325C;
+}
+section{
+    height: 500px;
+    margin: auto;
+}
+.bloco{
+    height: 500px;
+    padding-top: 50px;
+}
+.section_erro p{
+    text-align: center;
+}
+.bloco_carregamento{
+    max-width: 500px;
+    padding: 5px;
+    margin: auto;
+    height: 50px;
+    background-color: aliceblue;
+}
+.carregamento{
+    background-image: linear-gradient(to right, var(--escuro), var(--rose));
+    width: 500px;
+    height: 50px;
+    animation: carre 6s ease;
+
+}
+@keyframes carre {
+    0%{
+        width: 0px;
+    }
+    9%{
+        width: 1px;
+    }
+    20%{
+        width: 10px;
+    }
+    50%{
+        width: 300px;
+    }
+    100%{
+        width: 500px;
+    }
+
+}
+img{
+    width: 250px;
+    display: block;
+    margin: auto;
+}
+#p_2{
+    color: #a00030;
+    font-size: 24px;
+}
+a{
+    padding: 14px 0;
+    border-radius: 0px;
+    background-color: var(--branco);
+    color: var(--escuro);
+    border: 1px ridge var(--escuro);
+    width: 150px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+}
+a{
+    text-decoration: solid;
+    color: var(--escuro);
+}
+a:hover{
+    color: var(--branco);
+    background-color: #a00030;
+}
+.div_2{
+    display: none;
+    transform: scale(0);
+    transition: 0.5s;
+}
+#p_3{
+    color: var(--verde);
+    font-size: 24px;
+    margin: 8px 0;
+}

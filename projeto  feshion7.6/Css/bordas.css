@@ -1,0 +1,163 @@
+*{
+    padding: 0;
+    margin: 0;
+    --black: #000001;
+    --red: #E3371E;
+    --rosa: #FF7A48;
+    --rosa-vermelho: #103778;
+    --branco: #F8F4F5;
+    --verde: #0593A2;
+    --escuro: #151F30;
+}
+@keyframes borda1{
+    100%{
+        opacity: 1;
+        height: 0;
+        width: 360px;
+    }
+}
+@keyframes borda1a{
+    0%{
+        opacity: 1;
+        border-left: none;
+        width: 360px;
+    }
+    100%{
+        opacity: 1;
+        border-left: none;
+        width: 360px;
+        left: 35%;
+    }
+}
+@keyframes borda1b{
+    0%{
+        opacity: 0;
+    }
+}
+
+/* hfjiuswhwiuh */
+
+@keyframes borda2{
+    100%{
+        opacity: 1;
+        height: 360px;
+        width: 0;
+    }
+}
+@keyframes borda2a{
+    0%{
+        opacity: 1;
+        border-top: none;
+        height: 360px;
+    }
+    100%{
+        opacity: 1;
+        border-top: none;
+        height: 360px;
+        top: 50%;
+    }
+}
+@keyframes borda2b{
+    0%{
+        opacity: 0;
+    }
+}
+
+/* hfjiuswhwiuh */
+
+@keyframes borda3{
+    100%{
+        opacity: 1;
+        height: 0;
+        width: 360px;
+    }
+}
+@keyframes borda3a{
+    0%{
+        opacity: 1;
+        border-right: none;
+        width: 360px;
+    }
+    100%{
+        opacity: 1;
+        border-right: none;
+        width: 60px;
+        right: 80%;
+    }
+}
+@keyframes borda3b{
+    0%{
+        opacity: 0;
+    }
+}
+
+/* hfjiuswhwiuh */
+
+@keyframes borda4{
+    100%{
+        opacity: 1;
+        height: 360px;
+        width: 0;
+    }
+}
+@keyframes borda4a{
+    0%{
+        opacity: 1;
+        border-bottom: none;
+        height: 200px;
+    }
+    100%{
+        opacity: 1;
+        border-bottom: none;
+        height: 200px;
+        bottom: 70%;
+    }
+}
+@keyframes borda4b{
+    0%{
+        opacity: 0;
+    }
+}
+#borda_formulario1{
+    opacity: 1;
+    width:  0px;
+    height: 200px;
+    border-left: 9px solid var(--escuro);
+
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    /* animation: borda1 0.3s linear 1.6s, borda1a 0.3s linear 1.9s, borda1b 500s linear 2.2s; */
+}
+#borda_formulario2{
+    opacity: 1;
+    width: 300px;
+    height: 0px;
+    border-top: 9px solid var(--escuro);
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    /* animation: borda2 0.3s linear 1s, borda2a 0.3s linear 1.3s, borda2b 5s linear 1.6s; */
+}
+#borda_formulario3{
+    opacity: 1;
+    width: 0;
+    height: 200px;
+    border-right: 9px solid var(--escuro);
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+
+    /* animation: borda3 0.3s linear 2.2s, borda3a 0.3s linear 2.5s, borda3b 500s linear 2.8s; */
+}
+#borda_formulario4{
+    opacity: 1;
+    width: 300px;
+    height: 0;
+    border-bottom: 9px solid var(--escuro);
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+
+    /* animation: borda4 0.3s linear 2.8s, borda4a 0.3s linear 3.1s, borda4b 5s linear 3.4s; */
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sexo do Produto</title>
+    <link rel="shortcut icon" href="imgs/icone_terno.png" type="image/x-icon">
+    <link rel="stylesheet" href="Css/estilo_sexo.css">
+    <link rel="stylesheet" href="Css/bordas.css">
+</head>
+<body>
+    <header>
+        <div class="div_header_h1_img">
+            <img id="logo" src="imgs/logo.png" alt="logo">
+            <h1>Cadastrar Gênero do Produto</h1>
+        </div>
+        <nav>
+            <button class="botão_header"><a href="Index.html">Home</a></button>
+            <button class="botão_header">Cadastrar
+                <div id='links'>
+                    <a href="cliente.html">Cliente</a>
+                    <a href="produto.html">Produto</a>
+                    <a href="funcionario.html">Funcionário</a>
+                    <a href="cor.html">Cor do produto</a>
+                    <a href="genero.html">Gênero do produto</a>
+                    <a href="grupo.html">Grupo do produto</a>
+                    <a href="tamanho.html">Tamanho do Produto</a>
+                    <a href="fornecedor.html">Fornecedor</a>
+                    <a href="tipo_entrega.html">Entrega</a>
+                    <a href="intens_produto.html">Itens Produto</a>
+                    <a href="venda.html">Venda</a>
+                </div>
+            </button>
+        </nav>
+    </header>
+    <main>
+        <form>
+            <section class="section_inputs_listar">
+                <section class="section_inputs">
+                    <div id="borda_formulario2"></div>
+                    <div id="borda_formulario3"></div>
+                    <div id="borda_formulario4"></div>
+                    <div id="borda_formulario1"></div>
+                    <div class="div_inputs_labekl">
+                    <div class="div_inputs_labekl">
+                        <label>ID Gênero:</label>
+                        <input name="id_genero" onclick="crrr('id')" id="id" type="number">
+                    </div>
+                    <div class="div_inputs_labekl">
+                        <label>Gênero do Produto</label>
+                        <select onclick="crrr('select_tamanho')" name="genero" id="select_tamanho">
+                            <option value="F">F</option>
+                            <option value="M">M</option>
+                            <option value="Unisexe">Unisex</option>
+                        </select>
+                    </div>
+                    <img id='img_home_notbook' src="imgs/personagem_homem.png" alt="">
+                </section>
+            </section>
+            <section class="botoes">
+                <button class="botão_not_header" id="alterar">Salvar</button>
+                <button  class="botão_not_header" form="" onclick="listar()" id="salvar">Listar</button>
+            </section>
+        </form>
+    </main>
+    <footer>
+        <div>
+            <div class="div_1">
+                <img id="logo_footer" src="imgs/logo.png" alt="">
+                <p>&copy;Todos os direitos Reservados Fashion Style</p>
+            </div>
+            <div class="div_2">
+                <img class="icones_footer" src="imgs/facebook.png" alt="">
+                <p>@Fashion Style estilo</p>
+            </div>
+            <div class="div_2">
+                <img class="icones_footer" src="imgs/instagram.png" alt="">
+                <p>@Fashion Style estilo_gart2080</p>
+            </div>
+            <div class="div_2">
+                <img class="icones_footer" src="imgs/endereco.png" alt="">
+                <p>Endereço: Maldivas/ Buenos Aires/ Vinkacom</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        const id = document.getElementById('id')
+        const name = document.getElementById('select_tamanho')
+
+        const section = document.getElementsByClassName('section_inputs_listar')[0]
+
+        let cont = true
+
+    
+        function listar() {
+            if (cont == true){
+                const section_listar = document.createElement('section')
+                const botao_alterar = document.createElement('button')
+                const botao_excluir = document.createElement('button')
+                botao_alterar.innerText = 'Alterar'
+                botao_excluir.innerText = 'Excluir'
+                botao_alterar.className= "botão_not_header"
+                botao_excluir.className= "botão_not_header"
+
+                section_listar.className = 'section_listar'
+                section.insertAdjacentElement('beforeend', section_listar)
+                section_listar.insertAdjacentElement('beforeend', botao_alterar)
+                section_listar.insertAdjacentElement('beforeend', botao_excluir)
+            }
+            cont = false
+        }
+
+        function restet_css () {
+            id.style.backgroundColor = '#F8F4F5'
+            name.style.backgroundColor = '#F8F4F5'
+        }
+        function crrr (valor) {
+            restet_css()
+            document.getElementById(valor).style.backgroundColor = '#b0f1f8'
+        }
+    </script>
+</body>
+</html>
